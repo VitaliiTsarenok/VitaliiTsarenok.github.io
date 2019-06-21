@@ -692,8 +692,8 @@ header {
 
 .contact-us .map {
   width: 100%;
-  min-height: 30rem;
   height: auto;
+  min-height: 30rem;
 }
 
 .contact-us .location-container {
@@ -901,15 +901,38 @@ footer .rights {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 2.5rem 5rem;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     position: fixed;
     background-color: white;
+    opacity: 1;
     z-index: 999;
-    border-bottom: 2px solid #354A73;
+    padding: 2.5rem 9rem;
     line-height: 5rem;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transition: opacity 650ms;
+    -webkit-transition: opacity 650ms;
+    -moz-transition: opacity 650ms;
+    -ms-transition: opacity 650ms;
+    -o-transition: opacity 650ms;
+  }
+  .nav.hide {
+    transition: opacity 650ms;
+    -webkit-transition: opacity 650ms;
+    -moz-transition: opacity 650ms;
+    -ms-transition: opacity 650ms;
+    -o-transition: opacity 650ms;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    opacity: 0;
   }
   .nav .overlay {
     position: initial;
@@ -942,9 +965,6 @@ footer .rights {
   .nav .overlay ul li a:hover {
     color: #354a9f;
   }
-  section {
-    padding: 10rem 0;
-  }
   .contact-us .location-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -968,6 +988,9 @@ footer .rights {
 }
 
 @media screen and (min-width: 1024px) {
+  .nav {
+    padding: 2.5rem 17rem;
+  }
   .pre {
     white-space: pre;
     margin-left: -6rem;
@@ -996,6 +1019,21 @@ footer .rights {
   }
   footer .footer-nav {
     width: 60rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .nav {
+    padding: 2.5rem 20rem;
+  }
+  .contact-us .location-container {
+    width: 100rem;
+  }
+  .contact-us .location-container .map {
+    min-height: 40rem;
+  }
+  .contact-us .location-container .text-area {
+    height: 24rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

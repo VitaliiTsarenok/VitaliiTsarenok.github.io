@@ -11,6 +11,18 @@ $(document).ready(function(){
       $(this).parent().addClass('active');
       $(this).parent().siblings().removeClass('active');
   });
+ 
+ var PrevScrollPos = $(window).scrollTop();
+ 
+ $(window).scroll(function(){
+   var CurentScrollPos = $(window).scrollTop();
+   if(PrevScrollPos > CurentScrollPos){
+     $('nav').removeClass('hide');
+   } else{
+     $('nav').addClass('hide');
+   };
+   PrevScrollPos = CurentScrollPos;
+ });
 
 });
 
