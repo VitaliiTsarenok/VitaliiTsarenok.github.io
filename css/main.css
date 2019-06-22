@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -353,7 +354,8 @@ template {
 
 html {
   font-size: 10px;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   scroll-behavior: smooth;
 }
 
@@ -365,10 +367,6 @@ li {
   list-style: none;
 }
 
-section {
-  padding: 5rem 0;
-}
-
 /* Reusable classes */
 .container {
   width: 90%;
@@ -377,13 +375,13 @@ section {
 }
 
 .custom-font {
-  color: #354a9f;
+  color: #354a9e;
   text-transform: uppercase;
-  font-weight: 200;
   position: relative;
-  font-size: 1.8rem;
-  margin: 4rem auto;
-  width: 20rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin: 2rem auto;
+  width: 28rem;
 }
 
 .custom-font::before,
@@ -392,7 +390,7 @@ section {
   width: 7.3rem;
   height: .2rem;
   position: absolute;
-  background-color: #354a9f;
+  background-color: #354a9e;
   border-radius: .8rem;
   -webkit-border-radius: .8rem;
   -moz-border-radius: .8rem;
@@ -400,10 +398,17 @@ section {
   -o-border-radius: .8rem;
 }
 
+.custom-font::before {
+  top: -2rem;
+}
+
+.custom-font::after {
+  bottom: -2rem;
+}
+
 p {
   font-size: 1.5rem;
-  color: #354A73;
-  padding: 1rem 3.5rem;
+  color: #1b264d;
 }
 
 /* Header */
@@ -425,17 +430,17 @@ header {
 
 /* Header icon*/
 .menu {
-  padding: 2rem 2.5rem;
+  padding: 2.5rem;
   position: fixed;
-  top: 3rem;
-  right: 3rem;
-  background-color: rgba(53, 74, 115, 0.9);
+  top: 2rem;
+  right: 2.5rem;
+  background-color: rgba(27, 38, 77, 0.9);
   z-index: 999;
-  border-radius: .6rem;
-  -webkit-border-radius: .6rem;
-  -moz-border-radius: .6rem;
-  -ms-border-radius: .6rem;
-  -o-border-radius: .6rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   cursor: pointer;
 }
 
@@ -445,7 +450,7 @@ header {
   content: "";
   position: absolute;
   height: .2rem;
-  width: 4rem;
+  width: 3rem;
   background-color: white;
   top: 0;
   left: 0;
@@ -494,20 +499,24 @@ header {
 
 /* Header nav*/
 #logo {
-  height: 9.7rem;
-  width: 100%;
-  background-color: white;
-}
-
-#logo .logo {
-  height: 5rem;
-  margin: 2.5rem auto;
+  width: 8rem;
+  height: 5.9rem;
 }
 
 .nav {
   width: 100%;
-  height: 10rem;
+  height: 8rem;
   line-height: 10rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .overlay {
@@ -556,15 +565,16 @@ header {
 }
 
 .nav .overlay ul li.active a {
-  border-bottom: 1px solid #354A73;
+  color: #354a9e;
+  border-bottom: 1px solid #354a9e;
 }
 
 .nav .overlay ul li a {
   display: block;
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
   font-size: 2rem;
-  color: #354a9f;
+  color: #8a8a8a;
   transition: 650ms;
   -webkit-transition: 650ms;
   -moz-transition: 650ms;
@@ -573,7 +583,7 @@ header {
 }
 
 .nav .overlay ul li a:hover {
-  border-bottom: 1px solid #354A73;
+  border-bottom: 1px solid #354a9e;
 }
 
 /* Header text*/
@@ -587,30 +597,34 @@ header {
 }
 
 .main-text h1 {
-  font-size: 5rem;
-  font-weight: 600;
-  position: relative;
+  font-size: 5.5rem;
+  padding: 0 3.5rem;
 }
 
 .main-text p {
-  font-size: 2rem;
-  letter-spacing: .1rem;
-  font-weight: 100;
-  position: relative;
+  font-size: 1.8rem;
+  line-height: 3rem;
   color: white;
   font-style: italic;
   text-align: left;
+  padding: 1rem 3.5rem;
 }
 
 /* Section services*/
+.service {
+  padding: 9rem 0 9.8rem;
+}
+
 .service .container .custom-font::before {
-  top: -1.8rem;
-  left: -4rem;
+  left: -2.5rem;
 }
 
 .service .container .custom-font::after {
-  right: -4rem;
-  bottom: -1.8rem;
+  right: -2.5rem;
+}
+
+.service .container p {
+  padding: 4.2rem 0.5rem 3rem;
 }
 
 .service .container .store {
@@ -633,32 +647,35 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 14rem;
+  width: 15rem;
+  margin-top: 3rem;
 }
 
 .service .container .store .service-item img {
   display: block;
   height: 7.7rem;
   width: 7.7rem;
-  margin: 1rem 1rem 1.5rem 1rem;
+  margin-bottom: 3rem;
 }
 
 .service .container .store .service-item span {
-  font-size: 1.6rem;
-  color: #354a9f;
+  font-size: 1.4rem;
+  color: #354a9e;
   font-style: italic;
+  line-height: 2.2rem;
 }
 
 /* Section about-us*/
 .about-us {
   background: url("../img/counter-bg.jpg") bottom no-repeat;
   background-size: cover;
+  padding: 6.4rem 0 11rem;
 }
 
 .about-us .custom-font, .about-us p {
@@ -670,24 +687,32 @@ header {
 }
 
 .about-us .custom-font::before {
-  top: -1.8rem;
-  left: 0;
+  left: 3.9rem;
 }
 
 .about-us .custom-font::after {
-  right: 0;
-  bottom: -1.8rem;
+  right: 3.9rem;
+}
+
+.about-us p {
+  padding: 3rem 0.5rem 0;
 }
 
 /* Section contact-us*/
+.contact-us {
+  padding: 5.8rem 0 5.8rem;
+}
+
 .contact-us .custom-font::before {
-  top: -1.8rem;
-  left: 0;
+  left: 3.9rem;
 }
 
 .contact-us .custom-font::after {
-  right: 0;
-  bottom: -1.8rem;
+  right: 3.9rem;
+}
+
+.contact-us p {
+  padding-top: 3.5rem;
 }
 
 .contact-us .map {
@@ -697,7 +722,7 @@ header {
 }
 
 .contact-us .location-container {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .contact-us .add-relative {
@@ -738,18 +763,20 @@ header {
 .contact-us .add-relative .msg-send img {
   width: 70%;
   height: auto;
+  max-width: 26rem;
+  max-height: 12.5rem;
 }
 
 .contact-us .add-relative .msg-send .thank {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
-  font-weight: 700;
-  color: #354A73;
+  font-weight: 400;
+  color: #354a9e;
 }
 
 .contact-us .add-relative .msg-send .msg-text {
-  font-size: 1.2rem;
-  color: #354A73;
+  font-size: 1.6rem;
+  color: #1b264d;
 }
 
 .contact-us form {
@@ -774,15 +801,17 @@ header {
 .contact-us form .input, .contact-us form .text-area {
   width: 100%;
   max-width: 100%;
-  margin: .5rem 0;
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 2rem 2rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  height: 5rem;
   border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
   -ms-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
-  border: 0.1rem solid #354a9f;
+  border: 0.1rem solid #354a9e;
   color: #878787;
   outline: none;
 }
@@ -792,20 +821,23 @@ header {
 }
 
 .contact-us form .text-area {
-  height: 15rem;
+  padding-top: 3rem;
+  min-height: 17rem;
 }
 
 .contact-us form .btn-submit {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  background: #354a9f;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  background: #354a9e;
   color: white;
   width: 13rem;
   height: 5rem;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   cursor: pointer;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
   outline: none;
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
@@ -816,7 +848,7 @@ header {
 
 .contact-us form .btn-submit:hover {
   background: white;
-  color: #354a9f;
+  color: #354a9e;
 }
 
 /* Footer*/
@@ -829,13 +861,13 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #212322;
+  background: #131b36;
   color: white;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: center;
-  padding: 5rem 0 2.5rem;
-  font-size: 1.5rem;
+  padding: 6rem 0 2.5rem;
+  font-size: 1.2rem;
 }
 
 footer .footer-nav {
@@ -863,8 +895,8 @@ footer .footer-nav li {
       -ms-flex-align: center;
           align-items: center;
   width: 16rem;
-  height: 3rem;
-  line-height: 3rem;
+  height: 4rem;
+  line-height: 4rem;
 }
 
 footer .footer-nav li a {
@@ -879,23 +911,36 @@ footer .footer-nav li a:hover {
 }
 
 footer .rights {
-  padding-top: 1.5rem;
-  font-size: 1.1rem;
+  padding-top: 3.5rem;
+  font-size: 1.4rem;
 }
 
 @media screen and (min-width: 768px) {
   header {
-    height: 74rem;
+    height: 64rem;
+  }
+  /* Header text*/
+  .main-text {
+    margin: 17rem 0 auto;
+    text-align: left;
+  }
+  .main-text h1 {
+    padding: 0;
+    margin: 0;
+    margin-left: 10rem;
+  }
+  .main-text p {
+    margin-left: 10rem;
+    padding: 3.5rem 0;
+    width: 52rem;
+    margin-right: auto;
   }
   .menu {
     display: none;
   }
   #logo {
-    width: initial;
-    height: initial;
-  }
-  #logo .logo {
-    margin: 0 auto;
+    width: 10rem;
+    height: 5.9rem;
   }
   .nav {
     display: -webkit-box;
@@ -908,13 +953,16 @@ footer .rights {
     background-color: white;
     opacity: 1;
     z-index: 999;
-    padding: 2.5rem 9rem;
-    line-height: 5rem;
+    padding: 2.5rem 10rem;
+    line-height: initial;
     transform: scale(1);
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
+    box-shadow: 0px 14px 19px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 14px 19px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 14px 19px 0px rgba(0, 0, 0, 0.75);
     transition: opacity 650ms;
     -webkit-transition: opacity 650ms;
     -moz-transition: opacity 650ms;
@@ -950,20 +998,14 @@ footer .rights {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .nav .overlay ul li.active a {
-    color: #354a9f;
-  }
   .nav .overlay ul li a {
     width: initial;
-    margin: 0;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    margin-right: -1px;
-    padding: 0 2rem;
-    color: #504d4d;
+    font-size: 1.2rem;
+    margin: 2.4rem 1.4rem;
+    color: #8a8a8a;
   }
   .nav .overlay ul li a:hover {
-    color: #354a9f;
+    color: #354a9e;
   }
   .contact-us .location-container {
     display: -webkit-box;
@@ -973,8 +1015,11 @@ footer .rights {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 50rem;
-    margin: 0 auto;
+    width: 55.5rem;
+    margin: 4rem auto 0;
+  }
+  .contact-us .location-container .map {
+    height: 34.5rem;
   }
   .contact-us .location-container .msg-send {
     margin-top: 4rem;
@@ -984,6 +1029,8 @@ footer .rights {
   }
   footer .footer-nav li {
     width: initial;
+    height: initial;
+    line-height: initial;
   }
 }
 
@@ -991,13 +1038,15 @@ footer .rights {
   .nav {
     padding: 2.5rem 17rem;
   }
-  .pre {
-    white-space: pre;
-    margin-left: -6rem;
+  .main-text h1 {
+    margin-left: 17rem;
+  }
+  .main-text p {
+    margin-left: 17rem;
+    width: 64rem;
   }
   .contact-us .location-container {
-    width: 80rem;
-    margin: 3rem auto 0;
+    width: 92rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1015,25 +1064,42 @@ footer .rights {
     margin-top: 0;
   }
   .contact-us .location-container .add-padding-right {
-    padding-right: 5rem;
-  }
-  footer .footer-nav {
-    width: 60rem;
+    padding-right: 3rem;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .nav {
-    padding: 2.5rem 20rem;
+    padding: 2.5rem 40rem;
   }
+  .main-text h1 {
+    margin-left: 40rem;
+  }
+  .main-text p {
+    margin-left: 40rem;
+    width: 64rem;
+  }
+  /* Section services*/
+  .service p, .service .store {
+    width: 104.5rem;
+    margin: 0 auto;
+  }
+  .service .store {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  /* Section about-us*/
+  .about-us p {
+    width: 106.4rem;
+    margin: 0 auto;
+  }
+  /* Section contact-us*/
   .contact-us .location-container {
-    width: 100rem;
+    width: 114rem;
   }
   .contact-us .location-container .map {
-    min-height: 40rem;
-  }
-  .contact-us .location-container .text-area {
-    height: 24rem;
+    height: 34.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
