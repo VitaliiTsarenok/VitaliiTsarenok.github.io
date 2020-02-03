@@ -31,19 +31,15 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.js-nav').removeClass('active');
     $('.header').removeClass('index');
     var section = $(this).data('menuanchor');
-    console.log($(window).width() > 768, $(window).width(), $.fn.fullpage.moveTo);
 
     if ($.fn.fullpage.moveTo && $(window).width() > 768) {
       $.fn.fullpage.moveTo(section);
     } else {
       var body = $("html, body");
-      console.log("start animating");
       var top = $(".section[data-section=\"section".concat(section, "\"]")).position().top - 30;
       body.stop().animate({
         scrollTop: top
-      }, 500, 'swing', function () {
-        console.log("Finished animating");
-      });
+      }, 500, 'swing', function () {});
     }
   });
 });
@@ -198,12 +194,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // 	  }
   // 	}, WAIT));
   //   });
-  // $(window).scroll(function() {
-  // 	$('.mov').each(function(){
-  // 		console.log(123)
+  // $(window).scroll(function () {
+  // 	$('.mov').each(function () {
   // 		var imagePos = $(this).offset().top;
   // 		var topOfWindow = $(window).scrollTop();
-  // 		if (imagePos < topOfWindow+400) {
+  // 		if (imagePos < topOfWindow + 400) {
   // 			$(this).addClass('anim');
   // 		}
   // 	});
